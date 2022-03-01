@@ -1,0 +1,17 @@
+name: TestDeployment
+
+on:
+  workflow_dispatch:
+
+jobs:
+  Deploy-Sample-App:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Create JavaDocs
+        uses: Shynixn/jvm-docs-action@v0.0.1
+        with:
+          source-dirs: "sample-hello-world/sample-hello-world/src/main/java/com/github/shynixn/universe"
+          target-dir: "docs/apidocs"
+          doctype: "javaDocs"

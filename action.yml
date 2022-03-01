@@ -1,0 +1,28 @@
+name: 'JVM Docs'
+description: 'This GitHub action allows to either create JavaDocs or KotlinDocs by simply specifying the source directories.'
+inputs:
+  source-dirs:
+    type: string
+    description: 'All directories containing .java or .kt source files. Multiple directories should be split by ";".'
+    required: true
+  target-dir:
+    type: string
+    description: 'The target directory relative to the repository using this actions. e.g. docs/api-docs.'
+    required: true
+  doctype:
+    type: string
+    description: 'Specify which type of documentation should be generated. Can be "kotlinDocs" or "javaDocs".'
+    required: false
+    default: 'javaDocs'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.doctype }}
+    - ${{ inputs.source-dirs }}
+    - ${{ inputs.target-dir }}
+    - ${{ env.GITHUB_REF }}
+    - ${{ github.actor }}
+    - ${{ github.repository }}
+    - ${{ secrets.GITHUB_TOKEN }}

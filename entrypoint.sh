@@ -5,9 +5,12 @@ doctype=$1
 sourceDirs=$2
 targetFolder=$3
 githubBranchName=$4
-githubAccessToken=$5
-githubUserName=$6
-githubRepository=$7
+githubUserName=$5
+githubRepository=$6
+githubAccessToken=$7
+
+$githubBranchName=${githubBranchName##*/}
+$githubRepository=${githubRepository#*/}
 
 #doctype="kotlinDocs"
 #sourceDirs="sample-hello-world/src/main/java/com/github/shynixn/universe;sample-hello-world/src/main/java/com/github/shynixn"
@@ -18,6 +21,8 @@ githubRepository=$7
 #git clone https://github.com/Shynixn/StructureBlockLib
 
 # Setup Folder
+echo "Folder"
+ls
 targetFolder=$githubRepository/$targetFolder
 mkdir -p $targetFolder
 
