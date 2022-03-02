@@ -16,5 +16,5 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: ghcr.io
-          repository: shynixn/m2/jvm-docs-action-base
+          repository: shynixn/actions/jvm-docs-action-base
           tag_with_ref: true

@@ -12,17 +12,7 @@ githubAccessToken=$7
 $githubBranchName=${githubBranchName##*/}
 $githubRepository=${githubRepository#*/}
 
-#doctype="kotlinDocs"
-#sourceDirs="sample-hello-world/src/main/java/com/github/shynixn/universe;sample-hello-world/src/main/java/com/github/shynixn"
-#githubBranchName="master"
-#githubRepository="StructureBlockLib"
-#targetFolder="docs/myapidocs"
-#mkdir "master"
-#git clone https://github.com/Shynixn/StructureBlockLib
-
 # Setup Folder
-echo "Folder"
-ls
 rm -f -r $targetFolder
 mkdir -p $targetFolder
 
@@ -51,18 +41,8 @@ fi
 # Setup the repository
 git config --global user.email "jvm-docs-agent@email.com" && git config --global user.name "Jvm Docs Agent"
 
-# Tmp
-echo "https://$githubUserName:$githubAccessToken@github.com/$githubRepository.git"
-echo "HEAD:$githubBranchName"
-echo "$targetFolder"
-
 # Push the changes to Github
 cd $targetFolder
 git add .
 git commit --message "Updated $docMessage."
 git push --quiet "https://$githubUserName:$githubAccessToken@github.com/$githubRepository.git" "HEAD:$githubBranchName"
-echo "Updated $docMessage."
-
-echo "Tmp"
-cd /tmp
-ls
