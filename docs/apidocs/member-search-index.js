@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"com.github.shynixn.universe","c":"BlackHole","l":"BlackHole()","url":"%3Cinit%3E()"}]
