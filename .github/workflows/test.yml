@@ -16,3 +16,11 @@ jobs:
           target-dir: "docs/apidocs"
           doctype: "javaDocs"
           github-secret: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create KotlinDocs
+        uses: Shynixn/jvm-docs-action@v0.0.1
+        with:
+          source-dirs: "sample-hello-world/src/main/kotlin/com/github/shynixn/universe"
+          target-dir: "docs/apidocs"
+          doctype: "kotlinDocs"
+          github-secret: ${{ secrets.GITHUB_TOKEN }}
