@@ -1,3 +1,5 @@
+package com.github.shynixn
+
 /**
  * This is the class description.
  */
