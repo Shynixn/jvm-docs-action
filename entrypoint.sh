@@ -57,7 +57,7 @@ echo "$targetFolder"
 
 # Push the changes to Github
 cd $targetFolder
-git add --all
+git add .
 git commit --message "Updated $docMessage."
 git push --quiet "https://$githubUserName:$githubAccessToken@github.com/$githubRepository.git" "HEAD:$githubBranchName"
 echo "Updated $docMessage."
