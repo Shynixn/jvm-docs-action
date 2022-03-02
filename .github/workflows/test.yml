@@ -15,3 +15,4 @@ jobs:
           source-dirs: "sample-hello-world/sample-hello-world/src/main/java/com/github/shynixn/universe"
           target-dir: "docs/apidocs"
           doctype: "javaDocs"
+          github-secret: ${{ secrets.GITHUB_TOKEN }}
