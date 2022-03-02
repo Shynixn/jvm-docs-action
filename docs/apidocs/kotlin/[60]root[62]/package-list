@@ -1,0 +1,7 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:////PointingToDeclaration/[60]root[62]/[root]/index.html
+$dokka.location:/BlackHole///PointingToDeclaration/[60]root[62]/[root]/-black-hole/index.html
+$dokka.location:/BlackHole/BlackHole/#/PointingToDeclaration/[60]root[62]/[root]/-black-hole/-black-hole.html
+
+
