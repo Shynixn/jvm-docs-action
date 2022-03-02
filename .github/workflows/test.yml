@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Create JavaDocs
-        uses: Shynixn/jvm-docs-action@v0.0.1
+        uses: Shynixn/jvm-docs-action@v1.0.0
         with:
           source-dirs: "sample-hello-world/src/main/java/com/github/shynixn/universe"
           target-dir: "docs/apidocs/java"
@@ -18,7 +18,7 @@ jobs:
           github-secret: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create KotlinDocs
-        uses: Shynixn/jvm-docs-action@v0.0.1
+        uses: Shynixn/jvm-docs-action@v1.0.0
         with:
           source-dirs: "sample-hello-world/src/main/kotlin/com/github/shynixn/universe"
           target-dir: "docs/apidocs/kotlin"
