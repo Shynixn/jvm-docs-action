@@ -23,7 +23,6 @@ $githubRepository=${githubRepository#*/}
 # Setup Folder
 echo "Folder"
 ls
-targetFolder=$githubRepository/$targetFolder
 mkdir -p $targetFolder
 
 # Generate the KotlinDocs or JavaDocs
@@ -57,7 +56,7 @@ echo "HEAD:$githubBranchName"
 echo "$targetFolder"
 
 # Push the changes to Github
-cd $githubRepository
+cd $targetFolder
 git add --all
 git commit --message "Updated $docMessage."
 git push --quiet "https://$githubUserName:$githubAccessToken@github.com/$githubRepository.git" "HEAD:$githubBranchName"
