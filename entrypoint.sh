@@ -28,7 +28,7 @@ mkdir -p $targetFolder
 # Generate the KotlinDocs or JavaDocs
 if [ "$doctype" = "kotlinDocs" ]; then
   mkdir kotlinDocs
-  requiredDokkaPlugins="dokka-base.jar;dokka-analysis.jar;kotlin-analysis-compiler.jar;kotlin-analysis-intellij.jar;kotlinx-html-jvm.jar"
+  requiredDokkaPlugins="/tmp/dokka-base.jar;/tmp/dokka-analysis.jar;/tmp/kotlin-analysis-compiler.jar;/tmp/kotlin-analysis-intellij.jar;/tmp/kotlinx-html-jvm.jar"
   ls
   chmod +x dokka-cli.jar
   java -jar dokka-cli.jar -moduleName "$artifactId" -pluginsClasspath $requiredDokkaPlugins -sourceSet "-src $sourceDirs" -outputDir "kotlinDocs"
