@@ -3,5 +3,8 @@ $dokka.linkExtension:html
 $dokka.location:////PointingToDeclaration/[60]root[62]/[root]/index.html
 $dokka.location:/BlackHole///PointingToDeclaration/[60]root[62]/[root]/-black-hole/index.html
 $dokka.location:/BlackHole/BlackHole/#/PointingToDeclaration/[60]root[62]/[root]/-black-hole/-black-hole.html
+$dokka.location:/HelloWorld///PointingToDeclaration/[60]root[62]/[root]/-hello-world/index.html
+$dokka.location:/HelloWorld/HelloWorld/#/PointingToDeclaration/[60]root[62]/[root]/-hello-world/-hello-world.html
+$dokka.location:/HelloWorld/say/#kotlin.String/PointingToDeclaration/[60]root[62]/[root]/-hello-world/say.html
 
 
