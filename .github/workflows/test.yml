@@ -12,7 +12,7 @@ jobs:
       - name: Create JavaDocs
         uses: Shynixn/jvm-docs-action@v0.0.1
         with:
-          source-dirs: "sample-hello-world/sample-hello-world/src/main/java/com/github/shynixn/universe"
+          source-dirs: "sample-hello-world/src/main/java/com/github/shynixn/universe"
           target-dir: "docs/apidocs"
           doctype: "javaDocs"
           github-secret: ${{ secrets.GITHUB_TOKEN }}

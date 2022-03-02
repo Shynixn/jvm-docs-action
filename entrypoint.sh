@@ -51,9 +51,14 @@ fi
 # Setup the repository
 git config --global user.email "jvm-docs-agent@email.com" && git config --global user.name "Jvm Docs Agent"
 
+# Tmp
+echo "https://$githubUserName:$githubAccessToken@github.com/$githubRepository.git"
+echo "HEAD:$githubBranchName"
+echo "$targetFolder"
+
 # Push the changes to Github
 cd $githubRepository
 git add --all
 git commit --message "Updated $docMessage."
-git push --quiet "https://$githubUserName:$githubAccessToken@github.com/$githubUserName/$githubRepository.git" HEAD:$githubBranchName
+git push --quiet "https://$githubUserName:$githubAccessToken@github.com/$githubRepository.git" "HEAD:$githubBranchName"
 echo "Updated $docMessage."
