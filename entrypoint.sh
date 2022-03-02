@@ -23,6 +23,7 @@ $githubRepository=${githubRepository#*/}
 # Setup Folder
 echo "Folder"
 ls
+rm -f -r $targetFolder
 mkdir -p $targetFolder
 
 # Generate the KotlinDocs or JavaDocs

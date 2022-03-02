@@ -9,15 +9,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Delete Docs
-        run: |
-          rm -f -r docs
-
       - name: Create JavaDocs
         uses: Shynixn/jvm-docs-action@v0.0.1
         with:
           source-dirs: "sample-hello-world/src/main/java/com/github/shynixn/universe"
-          target-dir: "docs/apidocs"
+          target-dir: "docs/apidocs/java"
           doctype: "javaDocs"
           github-secret: ${{ secrets.GITHUB_TOKEN }}
 
@@ -25,6 +21,6 @@ jobs:
         uses: Shynixn/jvm-docs-action@v0.0.1
         with:
           source-dirs: "sample-hello-world/src/main/kotlin/com/github/shynixn/universe"
-          target-dir: "docs/apidocs"
+          target-dir: "docs/apidocs/kotlin"
           doctype: "kotlinDocs"
           github-secret: ${{ secrets.GITHUB_TOKEN }}
