@@ -14,7 +14,26 @@ inputs:
     description: 'Specify which type of documentation should be generated. Can be "kotlinDocs" or "javaDocs".'
     required: false
     default: 'javaDocs'
-
+  githubref:
+    type: string
+    description: 'Github parameter.'
+    required: false
+    default: ${{ github.ref }}
+  githubactor:
+    type: string
+    description: 'Github parameter.'
+    required: false
+    default: ${{ github.actor }}
+  githubrepository:
+    type: string
+    description: 'Github parameter.'
+    required: false
+    default: ${{ github.repository }}
+  githubsecret:
+    type: string
+    description: 'Github parameter.'
+    required: false
+    default: {{ secrets.GITHUB_TOKEN }}$
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -22,7 +41,7 @@ runs:
     - ${{ inputs.doctype }}
     - ${{ inputs.source-dirs }}
     - ${{ inputs.target-dir }}
-    - ${{ env.GITHUB_REF }}
-    - ${{ github.actor }}
-    - ${{ github.repository }}
-    - ${{ secrets.GITHUB_TOKEN }}
+    - ${{ inputs.githubref }}
+    - ${{ inputs.githubactor }}
+    - ${{ inputs.githubrepository }}
+    - ${{ inputs.githubsecret }}
