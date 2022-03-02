@@ -33,7 +33,7 @@ inputs:
     type: string
     description: 'Github parameter.'
     required: false
-    default: {{ secrets.GITHUB_TOKEN }}$
+    default: ${{ secrets.GITHUB_TOKEN }}
 runs:
   using: 'docker'
   image: 'Dockerfile'
