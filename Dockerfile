@@ -1,1 +1,1 @@
-FROM ghcr.io/shynixn/actions/jvm-docs-action-base
+FROM ghcr.io/shynixn/actions/jvm-docs-action-base:main
