@@ -20,7 +20,7 @@ jobs:
       - name: Create KotlinDocs
         uses: Shynixn/jvm-docs-action@v1.0.0
         with:
-          source-dirs: "sample-hello-world/src/main/kotlin/com/github/shynixn/universe"
+          source-dirs: "sample-hello-world/src/main/kotlin"
           target-dir: "docs/apidocs/kotlin"
           doctype: "kotlinDocs"
           github-secret: ${{ secrets.GITHUB_TOKEN }}
