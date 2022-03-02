@@ -22,7 +22,7 @@ if [ "$doctype" = "kotlinDocs" ]; then
   requiredDokkaPlugins="/tmp/dokka-base.jar;/tmp/dokka-analysis.jar;/tmp/kotlin-analysis-compiler.jar;/tmp/kotlin-analysis-intellij.jar;/tmp/kotlinx-html-jvm.jar"
   ls
   chmod +x /tmp/dokka-cli.jar
-  java -jar /tmp/dokka-cli.jar -moduleName "$artifactId" -pluginsClasspath $requiredDokkaPlugins -sourceSet "-src $sourceDirs" -outputDir "kotlinDocs"
+  java -jar /tmp/dokka-cli.jar -moduleName "docs" -pluginsClasspath $requiredDokkaPlugins -sourceSet "-src $sourceDirs" -outputDir "kotlinDocs"
   docMessage="KotlinDocs"
   cp -a kotlinDocs/. $targetFolder
 else
